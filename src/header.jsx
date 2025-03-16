@@ -43,10 +43,10 @@ let counter = 0;
           <span>student, developer</span>
         </div>
         <div className={styles.links}>
-          <SocialLinks path='public/socialLinks/vk.svg' link='https://vk.com/addnothing'/>
-          <SocialLinks path='public/socialLinks/gmail.svg' link='#' />
-          <SocialLinks path='public/socialLinks/github.svg' link='https://github.com/n0color' />
-          <SocialLinks path='public/socialLinks/telegram.svg' link='#' />
+          <SocialLinks path='public/svgFiles/vk.svg' link='https://vk.com/addnothing'/>
+          <SocialLinks path='public/svgFiles/gmail.svg' link='mailto:nocolor.web@gmail.com' />
+          <SocialLinks path='public/svgFiles/github.svg' link='https://github.com/n0color' />
+          <SocialLinks path='public/svgFiles/telegram.svg' link='https://t.me/addnothing' />
         </div>
         <div className={styles.grid}>
           {

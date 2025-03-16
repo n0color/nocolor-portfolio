@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles/header.module.scss'
+
 
 function SocialLinks({ link, path }) {
   return (
