@@ -1,6 +1,6 @@
 import React from 'react';
-const url = 
-"../public/CV.pdf";
+const url = "../CV.pdf";
+
 const PdfViewer = () => {
 
 

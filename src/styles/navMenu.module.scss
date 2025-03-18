@@ -1,13 +1,18 @@
 
 .navMenu {
   display: flex;
+  z-index: 999;
+  position: sticky;
+  top: 25px;
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: top;
   justify-content: space-between;
   padding: 0;
   padding-bottom: 30px;
   margin: 25px 25px 0 25px;
   height: 50px;
+  
 }
 .Link {
   font-family: 'Inter', sans-serif; 
@@ -26,7 +31,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #000;
+    background: #1B1B1B;
     width: 0;
     transition: width 0.3s ease, left 0.3s ease;
   }
@@ -38,8 +43,8 @@
 .buttonLogo {
   display: block;
   background-image: url("../../public/svgFiles/logo.svg");
-  width: 50px;
-  height: 50px;
+  width: calc(16px + (50 - 16) * ((100vw - 320px) / (1440 - 320)));
+  height: calc(16px + (50 - 16) * ((100vw - 320px) / (1440 - 320)));
   border: none;
   background-size: contain;
   background-repeat: no-repeat;
@@ -58,13 +63,12 @@
 }
 .switchTheme {
   background-image: url("../../public/svgFiles/dark-light.svg");
-  width: 40px;
-  height: 40px;
+  width: calc(16px + (40 - 16) * ((100vw - 320px) / (1440 - 320)));
+  height: calc(16px + (40 - 16) * ((100vw - 320px) / (1440 - 320)));
   border: none;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  padding: 0;
   background-color: transparent;
   transition: transform 0.5s;
   &:hover {

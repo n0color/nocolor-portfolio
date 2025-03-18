@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom"
 
 import Header from "./header";
 import NavMenu from "./components/navMenu";
+import AboutMe from "./Aboutme";
 
 export default function App() {
 
@@ -10,6 +10,7 @@ export default function App() {
    <>
      <NavMenu />
      <Header />
+     <AboutMe />
    </>
   )
 }

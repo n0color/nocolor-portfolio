@@ -43,10 +43,10 @@ let counter = 0;
           <span>student, developer</span>
         </div>
         <div className={styles.links}>
-          <SocialLinks path='public/svgFiles/vk.svg' link='https://vk.com/addnothing'/>
-          <SocialLinks path='public/svgFiles/gmail.svg' link='mailto:nocolor.web@gmail.com' />
-          <SocialLinks path='public/svgFiles/github.svg' link='https://github.com/n0color' />
-          <SocialLinks path='public/svgFiles/telegram.svg' link='https://t.me/addnothing' />
+          <SocialLinks path='svgFiles/vk.svg' link='https://vk.com/addnothing'/>
+          <SocialLinks path='svgFiles/gmail.svg' link='mailto:nocolor.web@gmail.com' />
+          <SocialLinks path='svgFiles/github.svg' link='https://github.com/n0color' />
+          <SocialLinks path='svgFiles/telegram.svg' link='https://t.me/addnothing' />
         </div>
         <div className={styles.grid}>
           {
@@ -58,6 +58,7 @@ let counter = 0;
               </div>
             })
           }
+          
         </div>
       </div>
     </>
