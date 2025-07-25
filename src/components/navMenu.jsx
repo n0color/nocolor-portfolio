@@ -1,17 +1,28 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import navStyles from '../styles/navMenu.module.scss'
+import '../styles/navMenu.scss'
 
 function NavMenu() {
 
+  function onLogoClick() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+  function switchTheme() {
+    document.documentElement.classList.toggle('dark');
+  }
+
   return (
-    <menu className={navStyles.navMenu}>
-      <Link className={navStyles.buttonLogo} to="/"></Link>
-      <div className={navStyles.LinkContainer}>
-        <button id="switchTheme" className={navStyles.switchTheme}></button>
-        <Link className={navStyles.Link} to="/">home</Link>
-        <Link className={navStyles.Link} to="/">blog</Link>
-        <Link className={navStyles.Link} to="/cv">CV</Link>
+    <menu className="navMenu">
+      <button className="buttonLogo" onClick={() => onLogoClick()}></button>
+      <div className="LinkContainer">
+        <button id="switchTheme" className="switchTheme" onClick={switchTheme}></button>
+        <Link className="Link" to="/#">works</Link>
+        <Link className="Link" to="/">blog</Link>
+        <Link className="Link" to="/cv">CV</Link>
       </div>
     </menu>
   )

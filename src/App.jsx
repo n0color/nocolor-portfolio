@@ -1,8 +1,10 @@
 import React from "react";
 
-import Header from "./header";
+import Header from "./components/header";
 import NavMenu from "./components/navMenu";
-import AboutMe from "./Aboutme";
+import AboutMe from "./components/Aboutme";
+import SkillsLogo from "./components/Skillslogo";
+import Works from "./components/works";
 
 export default function App() {
 
@@ -11,6 +13,8 @@ export default function App() {
      <NavMenu />
      <Header />
      <AboutMe />
+     <SkillsLogo />
+     <Works />
    </>
   )
 }

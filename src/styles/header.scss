@@ -1,6 +1,4 @@
 $font-family: Arial, Helvetica, sans-serif;
-$text-color: #1b1b1b;
-$background-color: #f8f9fa;
 
 a {
   position: relative;
@@ -20,7 +18,7 @@ a {
     max-height: 900px;
     align-items: center;
     justify-content: center;
-    background-color: $background-color;
+    background-color: var(--color-first);
     margin: 0;
     .body{
       text-align: center;
@@ -28,7 +26,7 @@ a {
       position: relative;
       z-index: 1;
       mix-blend-mode: difference;
-      color: white;
+      color: var(--color-text);
       pointer-events: none;
       h1 {
         font-weight: 700;
@@ -42,6 +40,8 @@ a {
 
     }
     .links {
+      position: relative;
+      z-index: 2;
       width: calc(240px + 2vw);
       display: flex;              
       justify-content: space-between;     
@@ -61,6 +61,7 @@ a {
           transition: transform 0.2s;
         }
         img {
+          mix-blend-mode: difference;
           width: calc(32px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
           height: calc(32px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
           &:hover {

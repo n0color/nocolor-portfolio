@@ -1,23 +1,23 @@
 
 .navMenu {
   display: flex;
-  z-index: 999;
+  z-index: 99999;
   position: sticky;
-  top: 25px;
+  top: 0px;
+  margin: 0px;
   display: flex;
   flex-direction: row;
-  align-items: top;
   justify-content: space-between;
   padding: 0;
   padding-bottom: 30px;
-  margin: 25px 25px 0 25px;
+  padding: 20px;
   height: 50px;
   
 }
 .Link {
   font-family: 'Inter', sans-serif; 
   font-weight: 400; 
-  color: inherit; 
+  color: var(--color-second); 
   text-decoration: none; 
   overflow: hidden;
 
@@ -31,7 +31,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #1B1B1B;
+    background: var(--color-second);
     width: 0;
     transition: width 0.3s ease, left 0.3s ease;
   }
@@ -62,7 +62,7 @@
   }
 }
 .switchTheme {
-  background-image: url("../../public/svgFiles/dark-light.svg");
+  background-image: url("/public/svgFiles/dark-light.svg");
   width: calc(16px + (40 - 16) * ((100vw - 320px) / (1440 - 320)));
   height: calc(16px + (40 - 16) * ((100vw - 320px) / (1440 - 320)));
   border: none;

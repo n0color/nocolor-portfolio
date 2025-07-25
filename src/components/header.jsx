@@ -1,7 +1,7 @@
-import styles from './styles/header.module.scss'
+import '../styles/header.scss'
 import { useState, useEffect } from 'react';
 
-import SocialLinks from './components/socialLinks';
+import SocialLinks from './socialLinks';
 
 export default function Header() {
 
@@ -25,11 +25,11 @@ let counter = 0;
   const colorize = (el) => {
     counter++;
     if(counter === 10) {
-      el.style.backgroundColor = 'darkblue' 
+      el.style.backgroundColor = '#555555' 
       counter = Math.floor(Math.random() * 10);;
     }   
     else
-      el.style.backgroundColor = '#000011'
+      el.style.backgroundColor = 'var(--color-second)';
     setTimeout( () => {
       el.style.backgroundColor = 'transparent';
     }, 230)
@@ -37,21 +37,21 @@ let counter = 0;
   
   return (
     <>
-      <div className={styles.headerContainer}>
-        <div className={styles.body}>
+      <div className="headerContainer">
+        <div className="body">
           <h1>NOCOLOR?</h1>
           <span>student, developer</span>
         </div>
-        <div className={styles.links}>
+        <div className="links">
           <SocialLinks path='svgFiles/vk.svg' link='https://vk.com/addnothing'/>
           <SocialLinks path='svgFiles/gmail.svg' link='mailto:nocolor.web@gmail.com' />
           <SocialLinks path='svgFiles/github.svg' link='https://github.com/n0color' />
           <SocialLinks path='svgFiles/telegram.svg' link='https://t.me/addnothing' />
         </div>
-        <div className={styles.grid}>
+        <div className="grid">
           {
             windowsWidth > 0 && [...Array(20).keys()].map( (_, index) => {
-              return <div key={index} className={styles.column}>
+              return <div key={index} className="column">
                   {
                     getBlocks()
                   }
