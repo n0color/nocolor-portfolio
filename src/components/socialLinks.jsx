@@ -1,10 +1,18 @@
 import React from "react";
-
-
-function SocialLinks({ link, path }) {
+import "../styles/header.scss";
+function SocialLinks({ link, lightIcon, darkIcon }) {
   return (
     <a href={link}>
-      <img src={path} alt="Social Link"/>
+      <img 
+        src={lightIcon} 
+        alt="Social Link"
+        className="social-icon-light"
+      />
+      <img 
+        src={darkIcon} 
+        alt="Social Link"
+        className="social-icon-dark"
+      />
     </a>
   )
 }

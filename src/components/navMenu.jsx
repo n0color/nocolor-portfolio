@@ -20,8 +20,8 @@ function NavMenu() {
       <button className="buttonLogo" onClick={() => onLogoClick()}></button>
       <div className="LinkContainer">
         <button id="switchTheme" className="switchTheme" onClick={switchTheme}></button>
-        <Link className="Link" to="/#">works</Link>
-        <Link className="Link" to="/">blog</Link>
+        <Link className="Link" to="/#works">works</Link>
+        <Link className="Link" to="/#blog">blog</Link>
         <Link className="Link" to="/cv">CV</Link>
       </div>
     </menu>

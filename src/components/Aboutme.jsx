@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/aboutMe.scss"
+import myPhoto from "../assets/MyPhoto.png";
 
 export default function AboutMe() {
 
@@ -7,7 +8,7 @@ export default function AboutMe() {
     <>
     <hr className="hr" />  
     <div className="container">
-      <img className="img" src="public/MyPhoto.png" alt="MyPhoto"/>
+      <img className="img" src={myPhoto} alt="MyPhoto"/>
       <div className="textContainer">
         <h2>About me</h2>
         <p className="textParagraph">

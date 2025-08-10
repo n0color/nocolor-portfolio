@@ -1,7 +1,14 @@
 import '../styles/header.scss'
 import { useState, useEffect } from 'react';
-
 import SocialLinks from './socialLinks';
+import vkIcon from '../assets/svgFiles/vk.svg';
+import gmailIcon from '../assets/svgFiles/gmail.svg';
+import githubIcon from '../assets/svgFiles/github.svg';
+import telegramIcon from '../assets/svgFiles/telegram.svg';
+import vkIcon2 from '../assets/svgFiles/vk2.svg';
+import gmailIcon2 from '../assets/svgFiles/gmail2.svg';
+import githubIcon2 from '../assets/svgFiles/github2.svg';
+import telegramIcon2 from '../assets/svgFiles/telegram2.svg';
 
 export default function Header() {
 
@@ -43,10 +50,10 @@ let counter = 0;
           <span>student, developer</span>
         </div>
         <div className="links">
-          <SocialLinks path='svgFiles/vk.svg' link='https://vk.com/addnothing'/>
-          <SocialLinks path='svgFiles/gmail.svg' link='mailto:nocolor.web@gmail.com' />
-          <SocialLinks path='svgFiles/github.svg' link='https://github.com/n0color' />
-          <SocialLinks path='svgFiles/telegram.svg' link='https://t.me/addnothing' />
+          <SocialLinks lightIcon={vkIcon} darkIcon={vkIcon2} link='https://vk.com/addnothing'/>
+          <SocialLinks lightIcon={gmailIcon} darkIcon={gmailIcon2} link='mailto:nocolor.web@gmail.com' />
+          <SocialLinks lightIcon={githubIcon} darkIcon={githubIcon2} link='https://github.com/n0color' />
+          <SocialLinks lightIcon={telegramIcon} darkIcon={telegramIcon2} link='https://t.me/addnothing' />
         </div>
         <div className="grid">
           {

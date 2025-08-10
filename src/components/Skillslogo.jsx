@@ -1,22 +1,18 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import "../styles/skillslogo.scss";
+import { useMousePosition } from "../hooks/useMousePosition";
+import group7 from "../assets/svgFiles/Group 7.svg";
+import group6 from "../assets/svgFiles/Group 6.svg";
+import group5 from "../assets/svgFiles/Group 5.svg";
+import skills from "../assets/svgFiles/SKILLS.svg";
 
 function SkillsLogo() {
-  const containerRef = useRef(null);
-  const [positions, setPositions] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e) => {
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-    setPositions({ x, y });
-  };
-
-  const handleMouseLeave = () => setPositions({ x: 0, y: 0 });
+  const { containerRef, positions, handleMouseMove, handleMouseLeave } = useMousePosition();
 
   return (
 <>
 <div
+      id="works"
       className="skillslogo"
       ref={containerRef}
       onMouseMove={handleMouseMove}
@@ -24,7 +20,7 @@ function SkillsLogo() {
     >
       <img
         className="logo"
-        src="public\\svgFiles\\Group 7.svg"
+        src={group7}
         alt="logo1"
         style={{
           transform: `translate(${positions.x * 20}px, ${positions.y * 20}px)`
@@ -32,7 +28,7 @@ function SkillsLogo() {
       />
       <img
         className="logo"
-        src="public\\svgFiles\\Group 6.svg"
+        src={group6}
         alt="logo2"
         style={{
           transform: `translate(${positions.x * 50}px, ${positions.y * 50}px)`
@@ -40,7 +36,7 @@ function SkillsLogo() {
       />
        <img
         className="skills"
-        src="public\\svgFiles\\SKILLS.svg"
+        src={skills}
         alt="logo1"
         style={{
           transform: `translate(${positions.x * 20}px, ${positions.y * 20}px)`
@@ -48,7 +44,7 @@ function SkillsLogo() {
       />
       <img
         className="logo"
-        src="public\\svgFiles\\Group 5.svg"
+        src={group5}
         alt="logo3"
         style={{
           transform: `translate(${positions.x * 150}px, ${positions.y * 150}px)`

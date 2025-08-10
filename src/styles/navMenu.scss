@@ -42,7 +42,7 @@
 }
 .buttonLogo {
   display: block;
-  background-image: url("../../public/svgFiles/logo.svg");
+  background-image: url("../assets/svgFiles/logo.svg");
   width: calc(16px + (50 - 16) * ((100vw - 320px) / (1440 - 320)));
   height: calc(16px + (50 - 16) * ((100vw - 320px) / (1440 - 320)));
   border: none;
@@ -61,8 +61,11 @@
     transition: transform 0.2s;
   }
 }
+html.dark .buttonLogo {
+  background-image: url("../assets/svgFiles/logo2.svg");
+}
 .switchTheme {
-  background-image: url("/public/svgFiles/dark-light.svg");
+  background-image: url("../assets/svgFiles/dark-light.svg");
   width: calc(16px + (40 - 16) * ((100vw - 320px) / (1440 - 320)));
   height: calc(16px + (40 - 16) * ((100vw - 320px) / (1440 - 320)));
   border: none;
@@ -71,6 +74,7 @@
   cursor: pointer;
   background-color: transparent;
   transition: transform 0.5s;
+  transition: background-image 0.5s;
   &:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
@@ -79,4 +83,8 @@
     transform: scale(0.8);
     transition: transform 0.2s;
   }
+}
+html.dark .switchTheme {
+  transition: background-image 0.5s;
+  background-image: url("../assets/svgFiles/dark-light2.svg");
 }
