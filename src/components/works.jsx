@@ -30,6 +30,7 @@ export default function Works() {
         <a href="https://github.com/n0color/usadbaderevenka"> Repository</a>
         </p>
       </div>
+      <span className="inProgress">In progress... 2025</span>
       <img src={bubbleBg} className="bubbleBg" />
       <img src={firstTriangles} className="firstTriangles" style={{
         transform: `translate(${positions.x * 20}px, ${positions.y * 20}px)`
